@@ -1,5 +1,7 @@
 # certbot-dns-tencent
 
+中文 | [English](README.en.md)
+
 腾讯云 DNS（DNSPod）的 Certbot DNS 认证插件，用法与 `certbot-dns-cloudflare` / `certbot-dns-google` 相同：
 通过 DNSPod API 3.0 自动添加、删除 `_acme-challenge` TXT 记录，完成 `dns-01` 验证。支持通配符证书和自动续期。
 
