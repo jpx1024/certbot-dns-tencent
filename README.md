@@ -67,13 +67,13 @@ chmod 600 /root/.secrets/certbot/tencent.ini
 certbot certonly \
   --authenticator dns-tencent \
   --dns-tencent-credentials /root/.secrets/certbot/tencent.ini \
-  --cert-name ssdmacg.com \
-  -d ssdmacg.com -d '*.ssdmacg.com' \
+  --cert-name example.com \
+  -d example.com -d '*.example.com' \
   --deploy-hook 'systemctl reload nginx'
 ```
 
 `--cert-name` 与原证书名相同时，certbot 会在原来的证书目录上续签，并把认证方式从 `manual` 改为 `dns-tencent`，
-Nginx 里的证书路径 `/etc/letsencrypt/live/ssdmacg.com/` 无需修改。先加 `--dry-run` 跑一遍测试环境更稳妥。
+Nginx 里的证书路径 `/etc/letsencrypt/live/example.com/` 无需修改。先加 `--dry-run` 跑一遍测试环境更稳妥。
 
 参数：
 
